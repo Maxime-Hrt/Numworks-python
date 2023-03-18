@@ -20,4 +20,4 @@ def eu(h, nb_points, y_init):
     return tab_coord
 
 
-print(eu(.01, 1000, 1))
+# print(eu(.01, 1000, 1))

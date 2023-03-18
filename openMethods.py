@@ -57,6 +57,6 @@ def sct(min, max, eps=0.0001, p=1):
     return None
 
 
-print(nr(2, 0.000000001))
-print(sct(0, 4, 0.000000001))
-print(hly(1))
+# print(nr(2, 0.000000001))
+# print(sct(0, 4, 0.000000001))
+# print(hly(1))
