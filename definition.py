@@ -48,3 +48,27 @@
 # pas trop, mais cet algorithme est
 # recommandé pour les polynômes de
 # grand degré... !
+
+# Runge-Kutta 2:
+# Il existe une infinite de methode de
+# Runge-Kutta 2, selon la valeur de beta
+# (beta = 1/2, beta = 1, beta = 3/4, etc.)
+# La fonction ci-dessous est la forme
+# generale de la methode de Runge-Kutta 2
+# (1-beta)f(x,y) +
+#     beta*f(x+h/2beta,y+(h/2beta)*f(x,y))
+
+# Runge-Kutta 4 est nomme ainsi car il
+# l'erreur de troncation est de
+# l'ordre de h^4
+
+# La methode de Rumberg:
+# permet de calculer la valeur
+# numerique d'une integrale definie
+
+
+# Comparaison RK2 et Euler:
+# RK2 plus precis que Euler, pour
+# ameliorer la precision on peut
+# dimuer h, ou utiliser RK4 par
+# exemple
