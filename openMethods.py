@@ -1,4 +1,7 @@
 # Replace the f and df return by the function
+# to use cos(x) and sin(x) instead of x and x^2
+# don't forget to import math in the file
+# cos(x) = math.cos(x)
 
 def f(x):
     return -9.6*pow(x, 5)-12*pow(x, 3)+10  # -1.6*pow(x, 6)-3*pow(x, 4)+10*x
