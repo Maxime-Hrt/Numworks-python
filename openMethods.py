@@ -12,7 +12,7 @@ def d2f(x):
     return -192*pow(x, 3)-72*x
 
 
-def nr(x0, eps, p=1.0):
+def nr(x0, eps=0.000000001, p=1.0):
     tab_v = []
     tab_i = []
     x = x0
@@ -57,6 +57,14 @@ def sct(min, max, eps=0.0001, p=1):
     return None
 
 
+def horner(x, tab):
+    res = tab[0]
+    for i in range(1, len(tab)):
+        res = res*x+tab[i]
+    return res
+
+
 # print(nr(2, 0.000000001))
 # print(sct(0, 4, 0.000000001))
 # print(hly(1))
+# print(horner(2, [3, 8, -5, 2, -2, 7]))
