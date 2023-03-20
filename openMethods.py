@@ -67,4 +67,6 @@ def horner(x, tab):
 # print(nr(2, 0.000000001))
 # print(sct(0, 4, 0.000000001))
 # print(hly(1))
+
+# 3x^5+8x^4-5x^3+2x^2-2x+7 pour x=2:
 # print(horner(2, [3, 8, -5, 2, -2, 7]))

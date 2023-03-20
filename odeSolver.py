@@ -1,12 +1,8 @@
 import math
 
 
-def f_euler(x, y):
+def f_diff(x, y):  # Equation differentielle:
     return -y+math.exp(-x)
-
-
-def euler_resolution(h, y, x):
-    return y+h*f_euler(x, y)
 
 
 def eu(h, nb_points, y_init):
@@ -15,9 +11,27 @@ def eu(h, nb_points, y_init):
     tab_coord.append(f"(0, {y_init})")
 
     for i in range(1, nb_points):
-        tab_coord.append(f"({i*h}, {euler_resolution(h, y, i*h)})")
-        y = euler_resolution(h, y, i*h)
+        tab_coord.append(f"({i*h}, {y+h*f_diff(i*h, y)})")
+        y = y+h*f_diff(i*h, y)
+    return tab_coord
+
+
+def rk2(h, nb_points, y_init):  # Runge-Kutta 2
+    tab_coord = []
+    y = y_init
+    tab_coord.append(f"(0, {y_init})")
+
+    # i*h = x ; pour beta = 1/2
+    for i in range(1, nb_points):
+        k1 = f_diff(i*h, y)
+        k2 = f_diff(i*h+h, y+h*k1)
+        y = y + h*(k1+k2)/2
+        # si beta = 1
+        # k2 = f_diff(i*h+h/2, y+(h*k1)/2)
+        # y = y + h*k2
+        tab_coord.append(f"({i*h}, {y})")
     return tab_coord
 
 
 # print(eu(.01, 1000, 1))
+# print(rk2(.01, 1000, 1))
